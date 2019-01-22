@@ -3,22 +3,62 @@
 		"multipart",
 		"youtube",
 		"image-captions",
-		"mathjax",
+		"disqus",
 		"donate",
-		"disqus"
+		"advanced-emoji",
+		"splitter",
+		"mermaid-gb3",
+		"puml",
+		"graph",
+		"chart",
+		"simple-page-toc",
+		"sitemap-general",
+		"todo",
+		"terminal",
+		"copy-code-button",
+		"include-csv",
+		"klipse",
+		"scripts",
+		"page-numbering",
+		 "codeblock-filename",
+		"katex"
 	    ],
 	    "pluginsConfig": {
-		"donate": {
-		  "wechat": "",
-		  "alipay": "",
-		  "title": "默认空",
-		  "button": "默认值：Donate",
-		  "alipayText": "默认值：支付宝捐赠",
-		  "wechatText": "默认值：微信捐赠"
-		},
 		 "disqus": {
-			    "shortName": "https-yubaoliu-gitbooks-io"
-			}
+		    "shortName": "https-yubaoliu-gitbooks-io"
+		},
+		"donate": {
+		  "wechat": "https://i.imgur.com/nUAbMLG.png",
+		  "alipay": "",
+		  "title": "",
+		  "button": "Donate",
+		  "alipayText": "支付宝捐赠",
+		  "wechatText": "微信捐赠"
+		},
+		"chart": {
+			    "type": "c3"
+			},
+		"sitemap-general": {
+				    "prefix": "https://yubaoliu.gitbooks.io"
+				},
+		"terminal": {
+			    "copyButtons": true,
+			    "fade": false,
+			    "style": "flat"
+			},
+		 "scripts": {
+		  "files": [
+				"./myscript.js"
+			    ]
+			},
+		"page-numbering": {
+			    "skipReadme": false,
+			    "chapterFormat": "Chapter #chapno#&nbsp;&nbsp;&nbsp;#title# ||| #chapno#&nbsp;&nbsp;&nbsp;#title#",
+			    "forceMultipleParts": false
+			},
+		 "image-captions": {
+			  "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+		      }
 
 	}
 
