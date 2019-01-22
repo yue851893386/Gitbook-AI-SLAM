@@ -1,0 +1,25 @@
+{
+	 "plugins": [
+		"multipart",
+		"youtube",
+		"image-captions",
+		"mathjax",
+		"donate",
+		"disqus"
+	    ],
+	    "pluginsConfig": {
+		"donate": {
+		  "wechat": "",
+		  "alipay": "",
+		  "title": "默认空",
+		  "button": "默认值：Donate",
+		  "alipayText": "默认值：支付宝捐赠",
+		  "wechatText": "默认值：微信捐赠"
+		},
+		 "disqus": {
+			    "shortName": "https-yubaoliu-gitbooks-io"
+			}
+
+	}
+
+}
