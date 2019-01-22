@@ -5,6 +5,7 @@ This file file serves as your book's preface, a great place to describe your boo
 
 # People, Labs
 ## Georg Klein
+![](http://www.robots.ox.ac.uk/~gk/imgs/georg_klein_136.jpg)
 - [Home Page](http://www.robots.ox.ac.uk/~gk/)
 - Introduction
     
