@@ -17,3 +17,5 @@ This file file serves as your book's preface, a great place to describe your boo
 - [Parallel Tracking and Mapping for Small AR Workspaces - Source Code](http://www.robots.ox.ac.uk/~gk/PTAM/)
 
 
+## Active Vision Laboratory
+- [home page](http://www.robots.ox.ac.uk/~lav/)
