@@ -14,5 +14,6 @@ This file file serves as your book's preface, a great place to describe your boo
 >    I was formerly a PhD student at the Machine Intelligence Laboratory of the Cambridge University Engineering Department, under the supervision of Dr. Tom Drummond. Originally from Austria, I matriculated at King's College, Cambridge in 1997 and obtained an MEng degree in 2001 and a PhD in 2006.
 
 
+- [Parallel Tracking and Mapping for Small AR Workspaces - Source Code](http://www.robots.ox.ac.uk/~gk/PTAM/)
 
 
