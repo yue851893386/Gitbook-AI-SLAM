@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Slam with objects using a nonparametric pose graph（2016）
 
 - Cite
@@ -13,8 +15,9 @@ organization={IEEE}
 }
 ```
 
+- [Dr. Michael Kaess](http://people.csail.mit.edu/kaess/)
 - [paper-pdf](https://arxiv.org/pdf/1704.05959.pdf)
-- [Github-Source Code-BeipengMu/objectSLAM](https://github.com/BeipengMu/objectSLAM)
+
 - [Demo-Youtube](https://youtu.be/YANUWdVLJD4)
 
 
@@ -49,11 +52,59 @@ Experimental results show that our approach has the new capability of associatin
 在单个框架中建模数据关联和SLAM。进一步引入算法以实现数据关联的推断和运行SLAM之间的相互交替。实验结果表明，我们的方法具有同时关联对象检测和同时对象定位的新功能，使得同时考虑数据关联与SLAM问题比只考虑一方而忽略另一方的情况有更明显的性能优势。
 
 
+## iSAM - Source Code Simulation
 
- 
+- [Github-Source Code-BeipengMu/objectSLAM](https://github.com/BeipengMu/objectSLAM)
+- [Online Documentation](http://people.csail.mit.edu/kaess/isam/doc/index.html)
+- [iSAM: Incremental Smoothing and Mapping](http://people.csail.mit.edu/kaess/isam/)
+
+### What is iSAM?
+
+iSAM is an optimization library for sparse nonlinear problems as encountered in simultaneous localization and mapping (SLAM). The iSAM library provides efficient algorithms for batch and incremental optimization, recovering the exact least-squares solution. The library can easily be extended to new problems, and functionality for often encountered 2D and 3D SLAM problems is already provided. The iSAM algorithm was originally developed by Michael Kaess and Frank Dellaert at Georgia Tech.
+
+### Directory tree
+
+```sh
+isamlib/  - Source code for the iSAM library
+include/  - Header files for the iSAM library
+isam/     - Source code for main iSAM executable
+examples/ - Example code for iSAM
+doc/      - Documentation (after calling "make doc")
+misc/     - Code referenced from publications
+data/     - Example data files for 2D and 3D
+lib/      - iSAM library (after calling "make")
+bin/      - Executables (after calling "make")
+```
+
+
+### iSAM library
+
+Folder isam contains the modified isam library to optimize pose graphs. There are pre-compiled executable file isam is under the bin folder To compile from source, following the commands on ubuntu: 
+
+```sh
+cd isam
+mkdir build && cd build && cmake .. 
+make
+```
+Fore more details about the library, refer to readme file under isam folder.
+
+### Simulation
+To generate simulated dataset, run generateSimData.m. Ground truth objects are randomly generated. Click in the figure to generate the ground truth trajectory, make sure there are enough loop closures. When finished, press enter button on the keyboard.
+
+To run the algorithm and compared algorithms, run main_simulation.m  
 
 
 
+
+
+
+
+
+## Refereces
+
+1. "iSAM: Incremental Smoothing and Mapping" by M. Kaess, A. Ranganathan, and F. Dellaert, IEEE Trans. on Robotics, TRO, vol. 24, no. 6, Dec. 2008, pp. 1365-1378, [PDF](http://www.cc.gatech.edu/~kaess/pub/Kaess08tro.pdf)
+1. "Covariance Recovery from a Square Root Information Matrix for Data Association" by M. Kaess and F. Dellaert, Journal of Robotics and Autonomous Systems, RAS, vol. 57, Dec. 2009, pp. 1198-1210, [PDF](http://www.cc.gatech.edu/~kaess/pub/Kaess09ras.pdf)
+1. "An Incremental Trust-Region Method for Robust Online Sparse Least-Squares Estimation" by D.M. Rosen, M. Kaess and J.J. Leonard, International Conference on Robotics and Automation (ICRA), May 2012, [PDF](http://people.csail.mit.edu/kaess/pub/Rosen12icra.pdf)
 
 
 
