@@ -22,6 +22,8 @@
 
 - [Dr. Michael Kaess](http://people.csail.mit.edu/kaess/)
 
+## Liam Paull
+- [Home Page](http://liampaull.ca/)
 
 
 

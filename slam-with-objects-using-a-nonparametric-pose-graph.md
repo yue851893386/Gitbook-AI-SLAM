@@ -31,9 +31,21 @@ Without accurate SLAM, possible data associations are combinatorial and become i
 
 
 ### Contribution
-1. This paper proposes a novel nonparametric pose graph that models data association and SLAM in a single framework.
-1. An algorithm is further introduced to alternate between inferring data association and performing SLAM. 
-1. our approach has the new capability of associating object detections and localizing objects at the same time, leading to significantly better performance on both the data association and SLAM problems than achieved by considering only one and ignoring imperfections in the other.
+
+- Creating a nonparametric pose graph model that couples
+data association and SLAM.
+- Proposing an algorithm that jointly infers data associations and optimizes robot poses/object locations over
+nonparametric pose graphs.
+- Developing an approach to generate object measurements from RGB and depth images in 3D space via
+deep learning object detection.
+- Demonstrating the performance of the proposed approach via both simulated and real-world data.
+
+This paper proposes a novel nonparametric pose graph that models data association and SLAM in a single framework.
+
+An algorithm is further introduced to alternate between inferring data association and performing SLAM. 
+
+
+our approach has the new capability of associating object detections and localizing objects at the same time, leading to significantly better performance on both the data association and SLAM problems than achieved by considering only one and ignoring imperfections in the other.
 
 
 
@@ -55,17 +67,64 @@ Experimental results show that our approach has the new capability of associatin
 
 -  Occupancy grid map with LiDAR or laser range finders 
 
-In occupancy based approaches, the world is represented by 2D/3D grids composed of free spaces and occupied spaces. New scans from the LiDAR or laser range finders are compared and matched with previous scans to incrementally build such maps.
-
- The successful matching of two scans relies on geometric features such as corners.  In places that lack such features, like long hallways, SLAM using occupancy grid maps tends to fail.
+ In occupancy based approaches, the world is represented by 2D/3D grids composed of free spaces and occupied spaces. New scans from the LiDAR or laser range finders are compared and matched with previous scans to incrementally build such maps.
+ 
+  **However**, The successful matching of two scans relies on geometric features such as corners.  In places that lack such features, like long hallways, SLAM using occupancy grid maps tends to fail.
  
 - SLAM with 3D dense mapping and RGB-D cameras 
  
+ This line of work is able to utilize both the geometric information from depth
+cameras and the color information from RGB cameras to reconstruct environments in dense 3D maps. 
+
+ Incoming depth and color images are converted into volumes or deformation
+ surfaces, then matched with previously constructed volumes or surfaces to incrementally build the map. 
+ 
+ 3D densemaps provide photographic details of the environment with millions of volumes or surfaces. 
+ 
+ **However**, they rely heavily on parallel computation enabled by GPUs, and do not scale very well.
+ 
+-  factor graph 
+
+ A factor graph encodes the poses of the robot and the observed landmarks along the trajectory.
+
+ **However**, the convergence of factor graph SLAM algorithms relies heavily on correct data association of the landmarks. 
+
+- Objective of this paper
+
+ The focus on of this work is on SLAM in unknown environment by recognizing objects and utilizing their positions (object SLAM). 
+
+- Object SLAM
+
+ Object SLAM requires the robot to be able to detect objects, generate measurements, and associate these measurements to unique identifiers. 
+
+- object detection
+
+  object detection refers to the problem of identifying the occurrence of objects of some predefined object classes within an image. An object measurement is a 3D location of the detected object with respect to the robot pose. 
+  
+- Data association  
+
+  Data association refers to the problem of associating object measurements to unique identifiers across images. 
+
+- problem of object detection
+
+ The problem of object detection has been an important topic in the computer vision  community. 
+
+ Some recent work on Region-based Convolutional Neural Networks [15, 19] gained significant success on training deep learning models to detect multiple objects instances within a single image.
+  **However**, object detections only suggest the existence of objects of certain predefined object classes in an image, but provide no data association between images. given that an object of a certain class is detected in two images, the object detector provides no information on whether or not the detected objects in the two images are the same object. 
+  This is problematic for SLAM especially when there are multiple objects of the same object class in an environment.
+
+ How reliably SLAM can be achieved using only these ambiguous object detections remains an open question. 
+
+ The robot would need to establish the data association of object detections across images from different views.
+
+
 
 
 ## iSAM - Source Code Simulation
 
 - [Github-Source Code-BeipengMu/objectSLAM](https://github.com/BeipengMu/objectSLAM)
+- [Github- JuliaRobotics/IncrementalInference.jl](https://github.com/JuliaRobotics/IncrementalInference.jl)
+- [Github-BeipengMu/focused_slam](https://github.com/BeipengMu/focused_slam)
 - [Online Documentation](http://people.csail.mit.edu/kaess/isam/doc/index.html)
 - [iSAM: Incremental Smoothing and Mapping](http://people.csail.mit.edu/kaess/isam/)
 
