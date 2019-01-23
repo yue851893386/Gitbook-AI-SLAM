@@ -55,7 +55,12 @@ Experimental results show that our approach has the new capability of associatin
 
 -  Occupancy grid map with LiDAR or laser range finders 
 
- The successful matching of two scans relies on geometric features such as corners. 
+In occupancy based approaches, the world is represented by 2D/3D grids composed of free spaces and occupied spaces. New scans from the LiDAR or laser range finders are compared and matched with previous scans to incrementally build such maps.
+
+ The successful matching of two scans relies on geometric features such as corners.  In places that lack such features, like long hallways, SLAM using occupancy grid maps tends to fail.
+ 
+- SLAM with 3D dense mapping and RGB-D cameras 
+ 
 
 
 ## iSAM - Source Code Simulation
