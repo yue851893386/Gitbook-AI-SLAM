@@ -1,4 +1,7 @@
-## 
+
+## Slam with objects using a nonparametric pose graph
+
+- Cite
 
 ```bibtex
 @inproceedings{mu2016slam,
@@ -10,5 +13,9 @@
   organization={IEEE}
 }
 ```
+
+- [paper-pdf](https://arxiv.org/pdf/1704.05959.pdf)
+
+
 
 
