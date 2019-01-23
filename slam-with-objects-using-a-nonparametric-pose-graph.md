@@ -18,7 +18,7 @@ organization={IEEE}
 - [Demo-Youtube](https://youtu.be/YANUWdVLJD4)
 
 
-<iframe width="1143" height="857" src="https://www.youtube.com/embed/YANUWdVLJD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/YANUWdVLJD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Problems Solving
