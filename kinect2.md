@@ -1,6 +1,5 @@
 ---
 title: This is the Study Notes of Kinect2
-date: 2018-12-20
 ---
 
 
