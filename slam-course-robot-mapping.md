@@ -60,7 +60,6 @@ Examples:
 **Given**
 
 - The robot􏰀s controls
-  
   $$
   u_{1:T} = \{u_1, u_2, u_3 ..., u_T\}
   $$
@@ -80,7 +79,27 @@ Examples:
   x_{0:T} = \{x_0, x_1, x_2..., x_T \}
   $$    
 
-    
+**Probabilistic Approaches**
+- Uncertainty in the robot’s motions and observations
+- Use the probability theory to explicitly represent the uncertainty
+
+![Uncertainty Representation](/assets/Screen Shot 2019-01-28 at 8.14.04.png)
+            
+**In the Probabilistic World**
+
+Estimate the robot’s path and the map
+
+$$
+p(x_{0:T}, m | z_{1:T}, u_{1:T})
+$$
+
+![SLAM in the Probabilistic World](/assets/Screen Shot 2019-01-28 at 8.39.27.png)
+
+The whole thing we're going to do in this course is just how can we actually estimate that probability distribution.
+
+
+
+
 # References
 
 - [Robot Mapping - WS 2013/14](http://ais.informatik.uni-freiburg.de/teaching/ws13/mapping/)
