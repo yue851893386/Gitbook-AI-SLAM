@@ -47,9 +47,13 @@ SLAM is central to a range of indoor, outdoor, air and underwater applications f
 Examples:
   - At home: vacuum cleaner, lawn mower
   - Air: surveillance with unmanned air vehicles
-  - Underwater: reef monitoring
+  - Underwater: reef monitoring, catcombs
   - Underground: exploration of mines
   - Space: terrain mapping for localization
+
+**iRobot (Youtube Demo)**:
+
+<iframe width="640" height="383" src="https://www.youtube.com/embed/tZ0bq-jIg-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
