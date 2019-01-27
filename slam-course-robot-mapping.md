@@ -33,9 +33,19 @@ Estimate the robot’s poses and the landmarks at the same time
   - a map is needed for localization and
   - a pose estimate is needed for mapping
 
+It's a kind of a joint estimation task. We cannot fully decouple localization from mapping we actually have to solve this at the same point in time.
 
 
+**SLAM Applications**:
 
+SLAM is central to a range of indoor, outdoor, air and underwater applications for both manned and autonomous vehicles.
+
+Examples:
+  - At home: vacuum cleaner, lawn mower
+  - Air: surveillance with unmanned air vehicles
+  - Underwater: reef monitoring
+  - Underground: exploration of mines
+  - Space: terrain mapping for localization
 
 
 
