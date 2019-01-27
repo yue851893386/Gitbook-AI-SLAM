@@ -35,6 +35,10 @@ Estimate the robot’s poses and the landmarks at the same time
 
 It's a kind of a joint estimation task. We cannot fully decouple localization from mapping we actually have to solve this at the same point in time.
 
+**SLAM is Relevant**:
+- It is considered a fundamental problem for truly autonomous robots
+- SLAM is the basis for most navigation systems
+
 
 **SLAM Applications**:
 
