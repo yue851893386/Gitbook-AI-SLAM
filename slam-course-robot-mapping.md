@@ -55,9 +55,32 @@ Examples:
 
 <iframe width="640" height="383" src="https://www.youtube.com/embed/tZ0bq-jIg-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## **Definition of the SLAM Problem**
 
+**Given**
 
+- The robot􏰀s controls
   
+  $$
+  u_{1:T} = \{u_1, u_2, u_3 ..., u_T\}
+  $$
+  
+- Observations 
+  
+  $$
+  z_{1:T} = \{z_1, z_2, z_3..., z_T\}
+  $$
+
+**Wanted**
+
+- Map of the environment 
+  $m$
+- Path of the robot
+  $$
+  x_{0:T} = \{x_0, x_1, x_2..., x_T \}
+  $$    
+
+    
 # References
 
 - [Robot Mapping - WS 2013/14](http://ais.informatik.uni-freiburg.de/teaching/ws13/mapping/)
