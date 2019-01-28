@@ -36,7 +36,8 @@
 -
 
 
-
+# Math
+- [jlblancoc/tutorial-se3-manifold](https://github.com/jlblancoc/tutorial-se3-manifold)
 
 
 # Famous People, Labs
@@ -106,3 +107,9 @@ Imperial College London Smart Robotics Lab
 - [Andrew Davison: Research](https://www.doc.ic.ac.uk/~ajd/)
 
 - [Project-3. Semantic, Object-Level, and Dynamic Mapping](https://wp.doc.ic.ac.uk/sleutene/project/semantic-object-dynamic-mapping/)
+
+## Jose Luis Blanco
+Associate Professor at UAL - Mechanical Engineering & Robotics
+
+- [Home Page](https://w3.ual.es/~jlblanco/)
+- [Github](https://github.com/jlblancoc)

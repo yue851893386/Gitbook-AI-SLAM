@@ -217,3 +217,11 @@ yubao@yubao-Z370M-S01:~/ROS_WORKSPACE/courseRepo/1_Introduction$ cat run.sh
 
 
 ![rosrun rviz rviz](assets/markdown-img-paste-20190126151521687.png){#fig:}
+
+
+
+
+
+
+# Reference
+- [小象学院 2018最新SLAM无人驾驶、VR/AR课程](https://www.bilibili.com/video/av37063566/?p=2)

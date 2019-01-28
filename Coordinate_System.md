@@ -4,6 +4,7 @@
 
 # Rotation Matrix
 
+## 2D (Method 1)
 ![Coordinate Roatation](assets/markdown-img-paste-20190126225013479.png){#fig:}
 
 P(x,y):
@@ -52,6 +53,34 @@ y
 \end{bmatrix}
 $${#eq:}
 
+## 2D (Method 2)
+
+![Rotation Matrix in 2D[^XiaoXiangXueYuan]](assets/markdown-img-paste-20190128163102101.png){#fig:}
+
+
+
+$$
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+r00 & r01 \\
+r10 & r11
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+$$
+
+Use two vectors $(1, 0)$ and $(0, 1)$, we can calculate the unkonwn parameters.
+
+
+![Rotated Coordinate Frames in 2D [^RotatedCoordinate2D]](assets/markdown-img-paste-20190128164555171.png){#fig:}
+
+
 
 
 
@@ -63,3 +92,6 @@ $${#eq:}
 
 
 # Reference
+[^XiaoXiangXueYuan]: [小象学院 2018最新SLAM无人驾驶、VR/AR课程](https://www.bilibili.com/video/av37063566/?p=2)
+
+[^RotatedCoordinate2D]: Corke, Peter. Robotics, Vision and Control: Fundamental Algorithms In MATLAB® Second, Completely Revised. Vol. 118. Springer, 2017.
