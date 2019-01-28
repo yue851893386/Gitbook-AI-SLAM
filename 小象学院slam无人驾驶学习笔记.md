@@ -10,7 +10,7 @@ title:  小象学院slam无人驾驶学习笔记
 - [Course Introduction](http://www.chinahadoop.cn/course/1089)
 - [Github-Ivan Dryanovski](https://github.com/idryanov)
 
-Note: the source code is backed up in [Github](https://github.com/yubaoliu/AI-SLAM) with some modification.
+Note: the source code is backed up in [Github](https://github.com/yubaoliu/AI) with some modification.
 
 
 # Practice
@@ -20,6 +20,7 @@ Note: the source code is backed up in [Github](https://github.com/yubaoliu/AI-SL
 How to creat a ROS Workspace, it is more convenient than catkin_workspace
 
 - Create ROS_WORKSPACE
+
 ```sh
 mkdir ~/ROS_WORKSPACE
 ```

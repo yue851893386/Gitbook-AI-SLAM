@@ -5,6 +5,9 @@
 * [SLAM Resources](SLAM-Resources.md)
 * [SLAM Software](Software.md)
 
+# Math Foundamentals
+* [Coordinate_System](Coordinate_System.md)
+
 # AI SLAM
 
 * [AI SLAM Summary](AI-SLAM-Summary.md)
@@ -32,5 +35,6 @@
 # Tools
 * [kinect2](kinect2.md)
 
-# SLAM Course
+# Video Courses - Robot & SLAM & AI
 * [小象学院slam无人驾驶学习笔记](小象学院slam无人驾驶学习笔记.md)
+* [机器人视觉与控制学习笔记](机器人视觉与控制学习笔记.md)
