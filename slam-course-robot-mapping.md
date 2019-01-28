@@ -97,6 +97,9 @@ $$
 
 The whole thing we're going to do in this course is just how can we actually estimate that probability distribution.
 
+**Graphical Model**
+![Graphical Model](/assets/Screen Shot 2019-01-28 at 8.59.55.png)
+
 
 
 
