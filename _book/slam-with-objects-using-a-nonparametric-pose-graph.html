@@ -1,0 +1,784 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Slam with objects using a nonparametric pose graph · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Fusion++.html" />
+    
+    
+    <link rel="prev" href="AI-SLAM-Summary.html" />
+    
+
+    
+    <link rel="stylesheet" href="gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="SLAM-Introduction.html">
+            
+                <a href="SLAM-Introduction.html">
+            
+                    
+                    SLAM Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="SLAM-Resources.html">
+            
+                <a href="SLAM-Resources.html">
+            
+                    
+                    SLAM Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Software.html">
+            
+                <a href="Software.html">
+            
+                    
+                    SLAM Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Math Foundamentals</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Coordinate_System.html">
+            
+                <a href="Coordinate_System.html">
+            
+                    
+                    Coordinate_System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Recursive_Bayes_Filter.html">
+            
+                <a href="Recursive_Bayes_Filter.html">
+            
+                    
+                    Recursive Bayes Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">AI SLAM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="AI-SLAM-Summary.html">
+            
+                <a href="AI-SLAM-Summary.html">
+            
+                    
+                    AI SLAM Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="slam-with-objects-using-a-nonparametric-pose-graph.html">
+            
+                <a href="slam-with-objects-using-a-nonparametric-pose-graph.html">
+            
+                    
+                    Slam with objects using a nonparametric pose graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Fusion++.html">
+            
+                <a href="Fusion++.html">
+            
+                    
+                    Fusion++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="SLAM++.html">
+            
+                <a href="SLAM++.html">
+            
+                    
+                    SLAM++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="Monocular-Object-and-Plane-SLAM-in-Structured-Environments.html">
+            
+                <a href="Monocular-Object-and-Plane-SLAM-in-Structured-Environments.html">
+            
+                    
+                    Monocular Object and Plane SLAM in Structured Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="CubeSLAM.html">
+            
+                <a href="CubeSLAM.html">
+            
+                    
+                    CubeSLAM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="SSFM.html">
+            
+                <a href="SSFM.html">
+            
+                    
+                    SSFM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Traditional SLAM</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="ORB-SLAM.html">
+            
+                <a href="ORB-SLAM.html">
+            
+                    
+                    ORB-SLAM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">lidar</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="lidar.html">
+            
+                <a href="lidar.html">
+            
+                    
+                    lidar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="graph-slam.html">
+            
+                <a href="graph-slam.html">
+            
+                    
+                    graph slam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ML,DL</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="Mask-RCNN.html">
+            
+                <a href="Mask-RCNN.html">
+            
+                    
+                    Mask-RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tools</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="ros.html">
+            
+                <a href="ros.html">
+            
+                    
+                    ros
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="kinect2.html">
+            
+                <a href="kinect2.html">
+            
+                    
+                    kinect2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Video Courses - Robot & SLAM & AI</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="小象学院slam无人驾驶学习笔记.html">
+            
+                <a href="小象学院slam无人驾驶学习笔记.html">
+            
+                    
+                    小象学院slam无人驾驶学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="机器人视觉与控制学习笔记.html">
+            
+                <a href="机器人视觉与控制学习笔记.html">
+            
+                    
+                    机器人视觉与控制学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="slam-course-robot-mapping.html">
+            
+                <a href="slam-course-robot-mapping.html">
+            
+                    
+                    SLAM-Course-Robot Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Slam with objects using a nonparametric pose graph</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#slam-with-objects-using-a-nonparametric-pose-graph2016">Slam with objects using a nonparametric pose graph&#xFF08;2016&#xFF09;</a><ul>
+<li><a href="#problems-solving">Problems Solving</a></li>
+<li><a href="#contribution">Contribution</a></li>
+<li><a href="#abstract">Abstract</a></li>
+</ul>
+</li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#isam---source-code-simulation">iSAM - Source Code Simulation</a><ul>
+<li><a href="#what-is-isam">What is iSAM?</a></li>
+<li><a href="#directory-tree">Directory tree</a></li>
+<li><a href="#isam-library">iSAM library</a></li>
+<li><a href="#simulation">Simulation</a></li>
+</ul>
+</li>
+<li><a href="#refereces">Refereces</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="slam-with-objects-using-a-nonparametric-pose-graph&#xFF08;2016&#xFF09;">Slam with objects using a nonparametric pose graph&#xFF08;2016&#xFF09;</h2>
+<ul>
+<li>Cite</li>
+</ul>
+<pre><code class="lang-bibtex">@inproceedings{mu2016slam,
+title={Slam with objects using a nonparametric pose graph},
+author={Mu, Beipeng and Liu, Shih-Yuan and Paull, Liam and Leonard, John and How, Jonathan P},
+booktitle={Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International Conference on},
+pages={4602--4609},
+year={2016},
+organization={IEEE}
+}
+</code></pre>
+<ul>
+<li><a href="http://people.csail.mit.edu/kaess/" target="_blank">Dr. Michael Kaess</a></li>
+<li><a href="https://arxiv.org/pdf/1704.05959.pdf" target="_blank">paper-pdf</a></li>
+<li><a href="https://youtu.be/YANUWdVLJD4" target="_blank">Demo-Youtube</a></li>
+</ul>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/YANUWdVLJD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<h3 id="problems-solving">Problems Solving</h3>
+<p>The <strong>data association and simultaneous localization and mapping (SLAM)</strong> problems are, individually, well-studied in the literature. But these two problems are inherently tightly <strong>coupled</strong>, and that has not been well-addressed.
+Without accurate SLAM, possible data associations are combinatorial and become intractable easily. Without accurate data association, the error of SLAM algorithms diverge easily.</p>
+<h3 id="contribution">Contribution</h3>
+<ul>
+<li>Creating a nonparametric pose graph model that couples data association and SLAM.</li>
+<li>Proposing an algorithm that jointly infers data associations and optimizes robot poses/object locations over nonparametric pose graphs.</li>
+<li>Developing an approach to generate object measurements from RGB and depth images in 3D space via deep learning object detection.</li>
+<li>Demonstrating the performance of the proposed approach via both simulated and real-world data.</li>
+</ul>
+<p>This paper proposes a novel nonparametric pose graph that models data association and SLAM in a single framework.</p>
+<p>An algorithm is further introduced to alternate between inferring data association and performing SLAM.</p>
+<p>our approach has the new capability of associating object detections and localizing objects at the same time, leading to significantly better performance on both the data association and SLAM problems than achieved by considering only one and ignoring imperfections in the other.</p>
+<h3 id="abstract">Abstract</h3>
+<p>Mapping and self-localization in unknown environments are fundamental capabilities in many robotic applications. These tasks typically involve the identification of objects as unique features or landmarks, which requires the objects both to be detected and then assigned a unique identifier that can be maintained when viewed from different perspectives and in different images</p>
+<p>The <strong>data association and simultaneous localization and mapping (SLAM)</strong> problems are, individually, well-studied in the literature. But these two problems are inherently tightly <strong>coupled</strong>, and that has not been well-addressed.
+Without accurate SLAM, possible data associations are combinatorial and become intractable easily. Without accurate data association, the error of SLAM algorithms diverge easily.</p>
+<p>This paper proposes a novel nonparametric pose graph that models data association and SLAM in a single framework. An algorithm is further introduced to alternate between inferring data association and performing SLAM.</p>
+<p>Experimental results show that our approach has the new capability of associating object detections and localizing objects at the same time, leading to significantly better performance on both the data association and SLAM problems than achieved by considering only one and ignoring imperfections in the other.</p>
+<p>&#x5728;&#x672A;&#x77E5;&#x73AF;&#x5883;&#x4E2D;&#x8FDB;&#x884C;&#x5EFA;&#x56FE;&#x548C;&#x81EA;&#x6211;&#x5B9A;&#x4F4D;&#x662F;&#x8BB8;&#x591A;&#x673A;&#x5668;&#x4EBA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x3002;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x901A;&#x5E38;&#x6D89;&#x53CA;&#x5BF9;&#x8C61;&#x7684;&#x8BC6;&#x522B;&#xFF0C;&#x4F5C;&#x4E3A;&#x72EC;&#x7279;&#x7684;&#x7279;&#x5F81;&#x6216;&#x6807;&#x8BC6;&#xFF08;landmarks&#xFF09;,&#x56E0;&#x6B64;&#x9700;&#x8981;&#x68C0;&#x6D4B;&#x51FA;&#x8FD9;&#x4E9B;&#x7269;&#x4F53;&#xFF0C;&#x5E76;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x5EA6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x50CF;&#x4E2D;&#x80FD;&#x4FDD;&#x6301;&#x4E0E;&#x7EF4;&#x62A4;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x7279;&#x5F81;&#x3002;&#x6570;&#x636E;&#x5173;&#x8054;&#x548C;SLAM&#x95EE;&#x9898;&#x5DF2;&#x7ECF;&#x5355;&#x72EC;&#x5730;&#x5728;&#x6587;&#x732E;&#x4E2D;&#x6709;&#x5F88;&#x597D;&#x7684;&#x7814;&#x7A76;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x7D27;&#x5BC6;&#x8026;&#x5408;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x51C6;&#x786E;&#x7684;SLAM&#xFF0C;&#x53EF;&#x80FD;&#x7684;&#x6570;&#x636E;&#x5173;&#x8054;&#x662F;&#x7EC4;&#x5408;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5F88;&#x5BB9;&#x6613;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x51C6;&#x786E;&#x7684;&#x6570;&#x636E;&#x5173;&#x8054;&#xFF0C;SLAM&#x7B97;&#x6CD5;&#x7684;&#x5F88;&#x5BB9;&#x6613;&#x53D1;&#x751F;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x672C;&#x6587;&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x975E;&#x53C2;&#x6570;&#x59FF;&#x6001;&#x56FE;
+&#x5728;&#x5355;&#x4E2A;&#x6846;&#x67B6;&#x4E2D;&#x5EFA;&#x6A21;&#x6570;&#x636E;&#x5173;&#x8054;&#x548C;SLAM&#x3002;&#x8FDB;&#x4E00;&#x6B65;&#x5F15;&#x5165;&#x7B97;&#x6CD5;&#x4EE5;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x5173;&#x8054;&#x7684;&#x63A8;&#x65AD;&#x548C;&#x8FD0;&#x884C;SLAM&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4EA4;&#x66FF;&#x3002;&#x5B9E;&#x9A8C;&#x7ED3;&#x679C;&#x8868;&#x660E;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x65B9;&#x6CD5;&#x5177;&#x6709;&#x540C;&#x65F6;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x68C0;&#x6D4B;&#x548C;&#x540C;&#x65F6;&#x5BF9;&#x8C61;&#x5B9A;&#x4F4D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x5F97;&#x540C;&#x65F6;&#x8003;&#x8651;&#x6570;&#x636E;&#x5173;&#x8054;&#x4E0E;SLAM&#x95EE;&#x9898;&#x6BD4;&#x53EA;&#x8003;&#x8651;&#x4E00;&#x65B9;&#x800C;&#x5FFD;&#x7565;&#x53E6;&#x4E00;&#x65B9;&#x7684;&#x60C5;&#x51B5;&#x6709;&#x66F4;&#x660E;&#x663E;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x52BF;&#x3002;</p>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li><p>Occupancy grid map with LiDAR or laser range finders</p>
+<p>In occupancy based approaches, the world is represented by 2D/3D grids composed of free spaces and occupied spaces. New scans from the LiDAR or laser range finders are compared and matched with previous scans to incrementally build such maps.</p>
+<p><strong>However</strong>, The successful matching of two scans relies on geometric features such as corners.  In places that lack such features, like long hallways, SLAM using occupancy grid maps tends to fail.</p>
+</li>
+<li><p>SLAM with 3D dense mapping and RGB-D cameras</p>
+<p>This line of work is able to utilize both the geometric information from depth
+cameras and the color information from RGB cameras to reconstruct environments in dense 3D maps.</p>
+<p>Incoming depth and color images are converted into volumes or deformation
+surfaces, then matched with previously constructed volumes or surfaces to incrementally build the map.</p>
+<p>3D densemaps provide photographic details of the environment with millions of volumes or surfaces.</p>
+<p><strong>However</strong>, they rely heavily on parallel computation enabled by GPUs, and do not scale very well.</p>
+</li>
+<li><p>factor graph</p>
+<p>A factor graph encodes the poses of the robot and the observed landmarks along the trajectory.</p>
+<p><strong>However</strong>, the convergence of factor graph SLAM algorithms relies heavily on correct data association of the landmarks.</p>
+</li>
+<li><p>Objective of this paper</p>
+<p>The focus on of this work is on SLAM in unknown environment by recognizing objects and utilizing their positions (object SLAM).</p>
+</li>
+<li><p>Object SLAM</p>
+<p>Object SLAM requires the robot to be able to detect objects, generate measurements, and associate these measurements to unique identifiers.</p>
+</li>
+<li><p>object detection</p>
+<p>object detection refers to the problem of identifying the occurrence of objects of some predefined object classes within an image. An object measurement is a 3D location of the detected object with respect to the robot pose.</p>
+</li>
+<li><p>Data association</p>
+<p>Data association refers to the problem of associating object measurements to unique identifiers across images.</p>
+</li>
+<li><p>problem of object detection</p>
+<p>The problem of object detection has been an important topic in the computer vision  community.</p>
+<p>Some recent work on Region-based Convolutional Neural Networks [15, 19] gained significant success on training deep learning models to detect multiple objects instances within a single image.
+<strong>However</strong>, object detections only suggest the existence of objects of certain predefined object classes in an image, but provide no data association between images. given that an object of a certain class is detected in two images, the object detector provides no information on whether or not the detected objects in the two images are the same object.
+This is problematic for SLAM especially when there are multiple objects of the same object class in an environment.</p>
+<p>How reliably SLAM can be achieved using only these ambiguous object detections remains an open question.</p>
+<p>The robot would need to establish the data association of object detections across images from different views.</p>
+</li>
+</ul>
+<h2 id="isam---source-code-simulation">iSAM - Source Code Simulation</h2>
+<ul>
+<li><a href="https://github.com/BeipengMu/objectSLAM" target="_blank">Github-Source Code-BeipengMu/objectSLAM</a></li>
+<li><a href="https://github.com/JuliaRobotics/IncrementalInference.jl" target="_blank">Github- JuliaRobotics/IncrementalInference.jl</a></li>
+<li><a href="https://github.com/BeipengMu/focused_slam" target="_blank">Github-BeipengMu/focused_slam</a></li>
+<li><a href="http://people.csail.mit.edu/kaess/isam/doc/index.html" target="_blank">Online Documentation</a></li>
+<li><a href="http://people.csail.mit.edu/kaess/isam/" target="_blank">iSAM: Incremental Smoothing and Mapping</a></li>
+</ul>
+<h3 id="what-is-isam">What is iSAM?</h3>
+<p>iSAM is an optimization library for sparse nonlinear problems as encountered in simultaneous localization and mapping (SLAM). The iSAM library provides efficient algorithms for batch and incremental optimization, recovering the exact least-squares solution. The library can easily be extended to new problems, and functionality for often encountered 2D and 3D SLAM problems is already provided. The iSAM algorithm was originally developed by Michael Kaess and Frank Dellaert at Georgia Tech.</p>
+<h3 id="directory-tree">Directory tree</h3>
+<pre><code class="lang-sh">isamlib/  - Source code <span class="hljs-keyword">for</span> the iSAM library
+include/  - Header files <span class="hljs-keyword">for</span> the iSAM library
+isam/     - Source code <span class="hljs-keyword">for</span> main iSAM executable
+examples/ - Example code <span class="hljs-keyword">for</span> iSAM
+doc/      - Documentation (after calling <span class="hljs-string">&quot;make doc&quot;</span>)
+misc/     - Code referenced from publications
+data/     - Example data files <span class="hljs-keyword">for</span> 2D and 3D
+lib/      - iSAM library (after calling <span class="hljs-string">&quot;make&quot;</span>)
+bin/      - Executables (after calling <span class="hljs-string">&quot;make&quot;</span>)
+</code></pre>
+<h3 id="isam-library">iSAM library</h3>
+<p>Folder isam contains the modified isam library to optimize pose graphs. There are pre-compiled executable file isam is under the bin folder To compile from source, following the commands on ubuntu:</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> isam
+mkdir build &amp;&amp; <span class="hljs-built_in">cd</span> build &amp;&amp; cmake ..
+make
+</code></pre>
+<p>Fore more details about the library, refer to readme file under isam folder.</p>
+<h3 id="simulation">Simulation</h3>
+<p>To generate simulated dataset, run generateSimData.m. Ground truth objects are randomly generated. Click in the figure to generate the ground truth trajectory, make sure there are enough loop closures. When finished, press enter button on the keyboard.</p>
+<p>To run the algorithm and compared algorithms, run main_simulation.m</p>
+<h2 id="refereces">Refereces</h2>
+<ol>
+<li>&quot;iSAM: Incremental Smoothing and Mapping&quot; by M. Kaess, A. Ranganathan, and F. Dellaert, IEEE Trans. on Robotics, TRO, vol. 24, no. 6, Dec. 2008, pp. 1365-1378, <a href="http://www.cc.gatech.edu/~kaess/pub/Kaess08tro.pdf" target="_blank">PDF</a></li>
+<li>&quot;Covariance Recovery from a Square Root Information Matrix for Data Association&quot; by M. Kaess and F. Dellaert, Journal of Robotics and Autonomous Systems, RAS, vol. 57, Dec. 2009, pp. 1198-1210, <a href="http://www.cc.gatech.edu/~kaess/pub/Kaess09ras.pdf" target="_blank">PDF</a></li>
+<li>&quot;An Incremental Trust-Region Method for Robust Online Sparse Least-Squares Estimation&quot; by D.M. Rosen, M. Kaess and J.J. Leonard, International Conference on Robotics and Automation (ICRA), May 2012, <a href="http://people.csail.mit.edu/kaess/pub/Rosen12icra.pdf" target="_blank">PDF</a></li>
+</ol>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="AI-SLAM-Summary.html" class="navigation navigation-prev " aria-label="Previous page: AI SLAM Summary">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Fusion++.html" class="navigation navigation-next " aria-label="Next page: Fusion++">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Slam with objects using a nonparametric pose graph","level":"3.2","depth":1,"next":{"title":"Fusion++","level":"3.3","depth":1,"path":"Fusion++.md","ref":"Fusion++.md","articles":[]},"previous":{"title":"AI SLAM Summary","level":"3.1","depth":1,"path":"AI-SLAM-Summary.md","ref":"AI-SLAM-Summary.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"SLAM-Resources.html#fig1.3.1","level":"1.3","list_caption":"Figure: Georg Klein","alt":"Georg Klein","nro":1,"url":"http://www.robots.ox.ac.uk/~gk/imgs/georg_klein_136.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Georg Klein","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"SLAM++.html#fig3.4.1","level":"3.4","list_caption":"Figure: center 60%","alt":"center 60%","nro":2,"url":"/Assets/images/papers/SLAM++/SLAM++-RealTimeObjectDetection.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"center 60%","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"SLAM++.html#fig3.4.2","level":"3.4","list_caption":"Figure: 50% center","alt":"50% center","nro":3,"url":"/Assets/images/papers/SLAM++/ICP_breif_description.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"50% center","attributes":{},"skip":false,"key":"3.4.2"},{"backlink":"SLAM++.html#fig3.4.3","level":"3.4","list_caption":"Figure: center 80%","alt":"center 80%","nro":4,"url":"/Assets/images/papers/SLAM++/AugmentedRealityWithObjects.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"center 80%","attributes":{},"skip":false,"key":"3.4.3"},{"backlink":"kinect2.html#fig7.2.1","level":"7.2","list_caption":"Figure: Kinetic2 Demo","alt":"Kinetic2 Demo","nro":5,"url":"../Assets/Images/Kinetic2_Protonect_Test_Result.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Kinetic2 Demo","attributes":{},"skip":false,"key":"7.2.1"},{"backlink":"slam-course-robot-mapping.html#fig8.3.1","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":6,"url":"/assets/Estimate the Robot Pose.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.1"},{"backlink":"slam-course-robot-mapping.html#fig8.3.2","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":7,"url":"/assets/Estimate Landmarks.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.2"},{"backlink":"slam-course-robot-mapping.html#fig8.3.3","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":8,"url":"/assets/Screen Shot 2019-01-28 at 7.20.23.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.3"},{"backlink":"slam-course-robot-mapping.html#fig8.3.4","level":"8.3","list_caption":"Figure: Uncertainty Representation","alt":"Uncertainty Representation","nro":9,"url":"/assets/Screen Shot 2019-01-28 at 8.14.04.png","index":4,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Uncertainty Representation","attributes":{},"skip":false,"key":"8.3.4"},{"backlink":"slam-course-robot-mapping.html#fig8.3.5","level":"8.3","list_caption":"Figure: SLAM in the Probabilistic World","alt":"SLAM in the Probabilistic World","nro":10,"url":"/assets/Screen Shot 2019-01-28 at 8.39.27.png","index":5,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SLAM in the Probabilistic World","attributes":{},"skip":false,"key":"8.3.5"},{"backlink":"slam-course-robot-mapping.html#fig8.3.6","level":"8.3","list_caption":"Figure: Motion and Observation Model","alt":"Motion and Observation Model","nro":11,"url":"assets/markdown-img-paste-20190128111722554.png","index":6,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion and Observation Model","attributes":{},"skip":false,"key":"8.3.6"},{"backlink":"slam-course-robot-mapping.html#fig8.3.7","level":"8.3","list_caption":"Figure: Motion Model","alt":"Motion Model","nro":12,"url":"assets/markdown-img-paste-20190128112352359.png","index":7,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion Model","attributes":{},"skip":false,"key":"8.3.7"},{"backlink":"slam-course-robot-mapping.html#fig8.3.8","level":"8.3","list_caption":"Figure: Motion Model Example","alt":"Motion Model Example","nro":13,"url":"assets/markdown-img-paste-20190128111616903.png","index":8,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion Model Example","attributes":{},"skip":false,"key":"8.3.8"},{"backlink":"slam-course-robot-mapping.html#fig8.3.9","level":"8.3","list_caption":"Figure: Standard Odometry Model","alt":"Standard Odometry Model","nro":14,"url":"assets/markdown-img-paste-20190128112933104.png","index":9,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Standard Odometry Model","attributes":{},"skip":false,"key":"8.3.9"},{"backlink":"slam-course-robot-mapping.html#fig8.3.10","level":"8.3","list_caption":"Figure: Observation Model","alt":"Observation Model","nro":15,"url":"assets/markdown-img-paste-20190128114114463.png","index":10,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Observation Model","attributes":{},"skip":false,"key":"8.3.10"},{"backlink":"slam-course-robot-mapping.html#fig8.3.11","level":"8.3","list_caption":"Figure: Observation Model Examples","alt":"Observation Model Examples","nro":16,"url":"assets/markdown-img-paste-20190128114225690.png","index":11,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Observation Model Examples","attributes":{},"skip":false,"key":"8.3.11"}]},"plugins":["multipart","youtube","image-captions","disqus","donate","advanced-emoji","splitter","mermaid-gb3","puml","graph","chart","simple-page-toc","sitemap-general","todo","terminal","copy-code-button","include-csv","klipse","scripts","page-numbering","codeblock-filename","katex","livereload"],"pluginsConfig":{"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"https-yubaoliu-gitbooks-io"},"youtube":{},"puml":{},"livereload":{},"simple-page-toc":{},"todo":{},"splitter":{},"scripts":{"files":["./myscript.js"]},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"graph":{},"donate":{"alipay":"","alipayText":"支付宝捐赠","button":"Donate","title":"","wechat":"https://i.imgur.com/nUAbMLG.png","wechatText":"微信捐赠"},"sitemap-general":{"prefix":"https://yubaoliu.gitbooks.io"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"codeblock-filename":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"page-numbering":{"chapterFormat":"Chapter #chapno#&nbsp;&nbsp;&nbsp;#title# ||| #chapno#&nbsp;&nbsp;&nbsp;#title#","forceMultipleParts":false,"skipReadme":false},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"image-captions":{"caption":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"slam-with-objects-using-a-nonparametric-pose-graph.md","mtime":"2019-01-25T02:46:52.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T02:01:12.728Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-scripts/9f6c471c34065cdbabd862bf00229682-myscript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

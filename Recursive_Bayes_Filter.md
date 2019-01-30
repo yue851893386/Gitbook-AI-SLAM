@@ -25,15 +25,7 @@ $$bel(x_t)=p(x_t|z_{1:t-1}, u_{1:t})$$
 $$\overline {bel}(x_t) \rightarrow bel(x_t)$$
 
 ## Devrivation of Recursive Bayes Filter
-$$
-bel(x_t) = p(x_t|z_{1:t}, u_{1:t}) \\
-= \eta p(z_t|x_t,z_{1:t-1},u_{1:t})p(x_t|z_{1:t-1}, u_{1:t}) \\
-= \eta p(z_t|x_t) p(x_t|z_{1:t-1}, u_{1:t}) \\
-= \eta p(z_t|x_t) \int_{x_{t-1}} p(x_t|x_{t-1}, z_{1:t-1},u_{1:t})p(x_{t-1}|z_{1:t-1},u_{1:t})dx_{t-1} \\
-= \eta p(z_t|x_t) \int_{x_{t-1}} p(x_t|x_{t-1}, u_t) p(x_{t-1}|z_{1:t-1},u_{1:t})dx_{t-1} \\
-= \eta p(z_t|x_t) \int_{x_{t-1}} p(x_t|x_{t-1}, u_t) p(x_{t-1}|z_{1:t-1},u_{1:t-1})dx_{t-1}  \\
-= \eta p(z_t|x_t)  \int_{x_{t-1}} p(x_t|x_{t-1}, u_t) bel(x_{t-1})dx_{t-1}
-$$
+
 
 Techniques in Bayes Filter Devrivation:
 

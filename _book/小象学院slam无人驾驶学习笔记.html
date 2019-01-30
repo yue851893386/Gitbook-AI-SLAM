@@ -1,0 +1,813 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>小象学院slam无人驾驶学习笔记 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="机器人视觉与控制学习笔记.html" />
+    
+    
+    <link rel="prev" href="kinect2.html" />
+    
+
+    
+    <link rel="stylesheet" href="gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="SLAM-Introduction.html">
+            
+                <a href="SLAM-Introduction.html">
+            
+                    
+                    SLAM Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="SLAM-Resources.html">
+            
+                <a href="SLAM-Resources.html">
+            
+                    
+                    SLAM Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Software.html">
+            
+                <a href="Software.html">
+            
+                    
+                    SLAM Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Math Foundamentals</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Coordinate_System.html">
+            
+                <a href="Coordinate_System.html">
+            
+                    
+                    Coordinate_System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Recursive_Bayes_Filter.html">
+            
+                <a href="Recursive_Bayes_Filter.html">
+            
+                    
+                    Recursive Bayes Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">AI SLAM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="AI-SLAM-Summary.html">
+            
+                <a href="AI-SLAM-Summary.html">
+            
+                    
+                    AI SLAM Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="slam-with-objects-using-a-nonparametric-pose-graph.html">
+            
+                <a href="slam-with-objects-using-a-nonparametric-pose-graph.html">
+            
+                    
+                    Slam with objects using a nonparametric pose graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Fusion++.html">
+            
+                <a href="Fusion++.html">
+            
+                    
+                    Fusion++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="SLAM++.html">
+            
+                <a href="SLAM++.html">
+            
+                    
+                    SLAM++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="Monocular-Object-and-Plane-SLAM-in-Structured-Environments.html">
+            
+                <a href="Monocular-Object-and-Plane-SLAM-in-Structured-Environments.html">
+            
+                    
+                    Monocular Object and Plane SLAM in Structured Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="CubeSLAM.html">
+            
+                <a href="CubeSLAM.html">
+            
+                    
+                    CubeSLAM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="SSFM.html">
+            
+                <a href="SSFM.html">
+            
+                    
+                    SSFM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Traditional SLAM</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="ORB-SLAM.html">
+            
+                <a href="ORB-SLAM.html">
+            
+                    
+                    ORB-SLAM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">lidar</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="lidar.html">
+            
+                <a href="lidar.html">
+            
+                    
+                    lidar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="graph-slam.html">
+            
+                <a href="graph-slam.html">
+            
+                    
+                    graph slam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ML,DL</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="Mask-RCNN.html">
+            
+                <a href="Mask-RCNN.html">
+            
+                    
+                    Mask-RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tools</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="ros.html">
+            
+                <a href="ros.html">
+            
+                    
+                    ros
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="kinect2.html">
+            
+                <a href="kinect2.html">
+            
+                    
+                    kinect2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Video Courses - Robot & SLAM & AI</li>
+        
+        
+    
+        <li class="chapter active" data-level="8.1" data-path="小象学院slam无人驾驶学习笔记.html">
+            
+                <a href="小象学院slam无人驾驶学习笔记.html">
+            
+                    
+                    小象学院slam无人驾驶学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="机器人视觉与控制学习笔记.html">
+            
+                <a href="机器人视觉与控制学习笔记.html">
+            
+                    
+                    机器人视觉与控制学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="slam-course-robot-mapping.html">
+            
+                <a href="slam-course-robot-mapping.html">
+            
+                    
+                    SLAM-Course-Robot Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >小象学院slam无人驾驶学习笔记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="resources">Resources</h1>
+<ul>
+<li><a href="https://github.com/EricLYang/courseRepo" target="_blank">EricLYang/courseRepo</a>
+-<a href="https://www.bilibili.com/video/av37063566/?p=2" target="_blank">&#x3010;&#x5C0F;&#x8C61;&#x5B66;&#x9662;&#x3011;2018&#x6700;&#x65B0;SLAM&#x65E0;&#x4EBA;&#x9A7E;&#x9A76;&#x3001;VR/AR&#x8BFE;&#x7A0B;</a></li>
+<li><a href="http://www.chinahadoop.cn/course/1089" target="_blank">Course Introduction</a></li>
+<li><a href="https://github.com/idryanov" target="_blank">Github-Ivan Dryanovski</a></li>
+</ul>
+<p>Note: the source code is backed up in <a href="https://github.com/yubaoliu/AI" target="_blank">Github</a> with some modification.</p>
+<h1 id="practice">Practice</h1>
+<h2 id="ros-workspace">ROS Workspace</h2>
+<p>How to creat a ROS Workspace, it is more convenient than catkin_workspace</p>
+<ul>
+<li>Create ROS_WORKSPACE</li>
+</ul>
+<pre><code class="lang-sh">mkdir ~/ROS_WORKSPACE
+</code></pre>
+<ul>
+<li>Edit <code>~/.bashrc</code></li>
+</ul>
+<pre><code class="lang-sh">vim ~/.bashrc
+</code></pre>
+<p>Then, paste the following behind <code>source /opt/ros/kinetic/setup.bash</code></p>
+<pre><code class="lang-sh"><span class="hljs-built_in">export</span> ROS_WORKSPACE=<span class="hljs-variable">$HOME</span>/ROS_WORKSPACE
+<span class="hljs-built_in">export</span> ROS_PACKAGE_PATH=<span class="hljs-variable">$ROS_WORKSPACE</span>:<span class="hljs-variable">$ROS_PACKAGE_PATH</span>
+</code></pre>
+<h2 id="introduction">Introduction</h2>
+<h3 id="overview">Overview</h3>
+<p>Build the project</p>
+<ul>
+<li>cd build</li>
+<li>rm -r *</li>
+<li>cmake ..</li>
+<li>make -j4</li>
+</ul>
+<p>Download the data from TUM</p>
+<ul>
+<li>cd ..</li>
+<li>wget <a href="https://vision.in.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_room.bag" target="_blank">https://vision.in.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_room.bag</a></li>
+</ul>
+<p>Run</p>
+<ul>
+<li>roscore</li>
+<li>rosbag play rgbd_dataset_freiburg1_room.bag</li>
+<li>./RGBD_demo /camera/rgb/image_color /camera/depth/image /camera/rgb/- -camera_info /camera/depth/camera_info</li>
+<li>rosrun rviz rviz</li>
+</ul>
+<h3 id="compile">Compile</h3>
+<pre><code class="lang-sh">courseRepo/1_Introduction$ <span class="hljs-built_in">cd</span> build/
+courseRepo/1_Introduction/build$ cmake ..
+</code></pre>
+<p>Got this error:</p>
+<pre><code class="lang-sh">CMake Error at CMakeLists.txt:31 (find_package):
+  Could not find a configuration file <span class="hljs-keyword">for</span> package <span class="hljs-string">&quot;OpenCV&quot;</span> that is compatible
+  with requested version <span class="hljs-string">&quot;2.4.8&quot;</span>.
+
+  The following configuration files were considered but not accepted:
+
+    /opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig.cmake, version: 3.3.1
+</code></pre>
+<p>Solutions:</p>
+<p>Check OpenCV Version:</p>
+<pre><code class="lang-sh">yubao@yubao-Z370M-S01:~$ opencv_version
+3.3.1-dev
+</code></pre>
+<p>Therefore, replace OpenCV version to 3.3.1</p>
+<pre><code class="lang-sh">find_package(OpenCV 3.3 REQUIRED)
+</code></pre>
+<p>Then got this error:</p>
+<pre><code class="lang-sh">-- Found OpenCV: /opt/ros/kinetic (found suitable version <span class="hljs-string">&quot;3.3.1&quot;</span>, minimum required is <span class="hljs-string">&quot;3.3&quot;</span>)
+CMake Error at CMakeLists.txt:32 (find_package):
+  Could not find a configuration file <span class="hljs-keyword">for</span> package <span class="hljs-string">&quot;Eigen3&quot;</span> that is compatible
+  with requested version <span class="hljs-string">&quot;3.1.0&quot;</span>.
+
+  The following configuration files were considered but not accepted:
+
+    /usr/lib/cmake/eigen3/Eigen3Config.cmake, version: unknown
+</code></pre>
+<p>Solution:</p>
+<pre><code class="lang-sh">find_package(Eigen3  REQUIRED)
+</code></pre>
+<p>Then:</p>
+<pre><code class="lang-sh">courseRepo/1_Introduction/build$ make -j4
+</code></pre>
+<h3 id="run">Run</h3>
+<ul>
+<li>Run <code>roscore</code><pre><code class="lang-sh">  PARAMETERS
+   * /rosdistro: kinetic
+   * /rosversion: 1.12.14
+</code></pre>
+</li>
+<li><code>rosbag  play rgbd_dataset_freiburg1_room.bag</code></li>
+<li><code>rostopic list</code></li>
+</ul>
+<pre><code class="lang-sh">yubao@yubao-Z370M-S01:~$ rostopic list
+/camera/depth/camera_info
+/camera/depth/image
+/camera/rgb/camera_info
+/camera/rgb/image_color
+/clock
+/cortex_marker_array
+/imu
+/rosout
+/rosout_agg
+/tf
+</code></pre>
+<ul>
+<li>rostopic info</li>
+</ul>
+<pre><code class="lang-sh">yubao@yubao-Z370M-S01:~$ rostopic info /camera/depth/image
+Type: sensor_msgs/Image
+
+Publishers:
+ * /play_1548468788024808162 (http://yubao-Z370M-S01:39651/)
+
+Subscribers: None
+
+- rosrun image_view
+
+```sh
+rosrun image_view image_view image:=/camera/depth/image
+</code></pre>
+<p><img src="assets/markdown-img-paste-20190126111758180.png" alt="Depth Image">{#fig:}</p>
+<ul>
+<li><code>rostopic hz</code></li>
+</ul>
+<pre><code class="lang-sh">rostopic hz /camera/depth/image
+</code></pre>
+<p>Result:</p>
+<pre><code class="lang-sh">average rate: 30.003
+    min: 0.000s max: 0.109s std dev: 0.01654s window: 1010
+average rate: 30.006
+    min: 0.000s max: 0.109s std dev: 0.01663s window: 1040
+average rate: 29.995
+    min: 0.000s max: 0.109s std dev: 0.01685s window: 1070
+average rate: 29.999
+</code></pre>
+<ul>
+<li><code>rostopic echo</code><pre><code class="lang-sh">rostopic <span class="hljs-built_in">echo</span> /camera/depth/image/header
+</code></pre>
+</li>
+</ul>
+<p>Result:</p>
+<pre><code class="lang-sh">seq: 5638
+stamp:
+  secs: 1305031956
+  nsecs: 119492736
+frame_id: <span class="hljs-string">&quot;/openni_rgb_optical_frame&quot;</span>
+</code></pre>
+<ul>
+<li>Follow these steps</li>
+</ul>
+<pre><code class="lang-sh">yubao@yubao-Z370M-S01:~/ROS_WORKSPACE/courseRepo/1_Introduction$ cat run.sh
+<span class="hljs-comment">#roscore</span>
+
+<span class="hljs-comment">#rosbad play rrgbd_dataset_freiburg1_room.bag</span>
+
+./RGBD_demo /camera/rgb/image_color /camera/depth/image /camera/rgb/camera_info /camera/depth/camera_info
+
+<span class="hljs-comment"># rosrun rviz rviz</span>
+</code></pre>
+<p><img src="assets/markdown-img-paste-20190126150800334.png" alt="rqt">{#fig:}</p>
+<p><img src="assets/markdown-img-paste-20190126151521687.png" alt="rosrun rviz rviz">{#fig:}</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av37063566/?p=2" target="_blank">&#x5C0F;&#x8C61;&#x5B66;&#x9662; 2018&#x6700;&#x65B0;SLAM&#x65E0;&#x4EBA;&#x9A7E;&#x9A76;&#x3001;VR/AR&#x8BFE;&#x7A0B;</a></li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="kinect2.html" class="navigation navigation-prev " aria-label="Previous page: kinect2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="机器人视觉与控制学习笔记.html" class="navigation navigation-next " aria-label="Next page: 机器人视觉与控制学习笔记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"小象学院slam无人驾驶学习笔记","level":"8.1","depth":1,"next":{"title":"机器人视觉与控制学习笔记","level":"8.2","depth":1,"path":"机器人视觉与控制学习笔记.md","ref":"机器人视觉与控制学习笔记.md","articles":[]},"previous":{"title":"kinect2","level":"7.2","depth":1,"path":"kinect2.md","ref":"kinect2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"SLAM-Resources.html#fig1.3.1","level":"1.3","list_caption":"Figure: Georg Klein","alt":"Georg Klein","nro":1,"url":"http://www.robots.ox.ac.uk/~gk/imgs/georg_klein_136.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Georg Klein","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"SLAM++.html#fig3.4.1","level":"3.4","list_caption":"Figure: center 60%","alt":"center 60%","nro":2,"url":"/Assets/images/papers/SLAM++/SLAM++-RealTimeObjectDetection.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"center 60%","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"SLAM++.html#fig3.4.2","level":"3.4","list_caption":"Figure: 50% center","alt":"50% center","nro":3,"url":"/Assets/images/papers/SLAM++/ICP_breif_description.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"50% center","attributes":{},"skip":false,"key":"3.4.2"},{"backlink":"SLAM++.html#fig3.4.3","level":"3.4","list_caption":"Figure: center 80%","alt":"center 80%","nro":4,"url":"/Assets/images/papers/SLAM++/AugmentedRealityWithObjects.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"center 80%","attributes":{},"skip":false,"key":"3.4.3"},{"backlink":"kinect2.html#fig7.2.1","level":"7.2","list_caption":"Figure: Kinetic2 Demo","alt":"Kinetic2 Demo","nro":5,"url":"../Assets/Images/Kinetic2_Protonect_Test_Result.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Kinetic2 Demo","attributes":{},"skip":false,"key":"7.2.1"},{"backlink":"slam-course-robot-mapping.html#fig8.3.1","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":6,"url":"/assets/Estimate the Robot Pose.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.1"},{"backlink":"slam-course-robot-mapping.html#fig8.3.2","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":7,"url":"/assets/Estimate Landmarks.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.2"},{"backlink":"slam-course-robot-mapping.html#fig8.3.3","level":"8.3","list_caption":"Figure: Localization Example","alt":"Localization Example","nro":8,"url":"/assets/Screen Shot 2019-01-28 at 7.20.23.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Localization Example","attributes":{},"skip":false,"key":"8.3.3"},{"backlink":"slam-course-robot-mapping.html#fig8.3.4","level":"8.3","list_caption":"Figure: Uncertainty Representation","alt":"Uncertainty Representation","nro":9,"url":"/assets/Screen Shot 2019-01-28 at 8.14.04.png","index":4,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Uncertainty Representation","attributes":{},"skip":false,"key":"8.3.4"},{"backlink":"slam-course-robot-mapping.html#fig8.3.5","level":"8.3","list_caption":"Figure: SLAM in the Probabilistic World","alt":"SLAM in the Probabilistic World","nro":10,"url":"/assets/Screen Shot 2019-01-28 at 8.39.27.png","index":5,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SLAM in the Probabilistic World","attributes":{},"skip":false,"key":"8.3.5"},{"backlink":"slam-course-robot-mapping.html#fig8.3.6","level":"8.3","list_caption":"Figure: Motion and Observation Model","alt":"Motion and Observation Model","nro":11,"url":"assets/markdown-img-paste-20190128111722554.png","index":6,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion and Observation Model","attributes":{},"skip":false,"key":"8.3.6"},{"backlink":"slam-course-robot-mapping.html#fig8.3.7","level":"8.3","list_caption":"Figure: Motion Model","alt":"Motion Model","nro":12,"url":"assets/markdown-img-paste-20190128112352359.png","index":7,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion Model","attributes":{},"skip":false,"key":"8.3.7"},{"backlink":"slam-course-robot-mapping.html#fig8.3.8","level":"8.3","list_caption":"Figure: Motion Model Example","alt":"Motion Model Example","nro":13,"url":"assets/markdown-img-paste-20190128111616903.png","index":8,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Motion Model Example","attributes":{},"skip":false,"key":"8.3.8"},{"backlink":"slam-course-robot-mapping.html#fig8.3.9","level":"8.3","list_caption":"Figure: Standard Odometry Model","alt":"Standard Odometry Model","nro":14,"url":"assets/markdown-img-paste-20190128112933104.png","index":9,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Standard Odometry Model","attributes":{},"skip":false,"key":"8.3.9"},{"backlink":"slam-course-robot-mapping.html#fig8.3.10","level":"8.3","list_caption":"Figure: Observation Model","alt":"Observation Model","nro":15,"url":"assets/markdown-img-paste-20190128114114463.png","index":10,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Observation Model","attributes":{},"skip":false,"key":"8.3.10"},{"backlink":"slam-course-robot-mapping.html#fig8.3.11","level":"8.3","list_caption":"Figure: Observation Model Examples","alt":"Observation Model Examples","nro":16,"url":"assets/markdown-img-paste-20190128114225690.png","index":11,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Observation Model Examples","attributes":{},"skip":false,"key":"8.3.11"}]},"plugins":["multipart","youtube","image-captions","disqus","donate","advanced-emoji","splitter","mermaid-gb3","puml","graph","chart","simple-page-toc","sitemap-general","todo","terminal","copy-code-button","include-csv","klipse","scripts","page-numbering","codeblock-filename","katex","livereload"],"pluginsConfig":{"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"https-yubaoliu-gitbooks-io"},"youtube":{},"puml":{},"livereload":{},"simple-page-toc":{},"todo":{},"splitter":{},"scripts":{"files":["./myscript.js"]},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"graph":{},"donate":{"alipay":"","alipayText":"支付宝捐赠","button":"Donate","title":"","wechat":"https://i.imgur.com/nUAbMLG.png","wechatText":"微信捐赠"},"sitemap-general":{"prefix":"https://yubaoliu.gitbooks.io"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"codeblock-filename":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"page-numbering":{"chapterFormat":"Chapter #chapno#&nbsp;&nbsp;&nbsp;#title# ||| #chapno#&nbsp;&nbsp;&nbsp;#title#","forceMultipleParts":false,"skipReadme":false},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"image-captions":{"caption":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"小象学院slam无人驾驶学习笔记.md","mtime":"2019-01-28T06:13:02.205Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T02:01:12.728Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-scripts/9f6c471c34065cdbabd862bf00229682-myscript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
