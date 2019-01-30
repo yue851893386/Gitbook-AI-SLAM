@@ -109,6 +109,7 @@ $$
 
 - Online SLAM seeks to recover only the
 most recent pose
+
 $$
 p(x_t, m | z_{1:t}, u_{1:t})
 $$

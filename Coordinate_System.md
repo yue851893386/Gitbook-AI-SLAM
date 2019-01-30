@@ -22,12 +22,12 @@ $$
 \left\{\begin{matrix}
 x \prime = \overline{OP} cos(\alpha + \theta) \\
 y \prime = \overline{OP} sin(\alpha + \theta)
-\end{matrix}\right. \\
+\end{matrix}\right.
 =
 \left\{\begin{matrix}
 x \prime = \overline{OP}(cos \alpha cos \theta - sin\alpha\sin \theta) \\
 y \prime = \overline{OP}(sin \alpha cos \theta + cos \alpha sin \theta)
-\end{matrix}\right. \\
+\end{matrix}\right.
 =
 \left\{\begin{matrix}
 x \prime = x cos \theta - y\sin \theta \\

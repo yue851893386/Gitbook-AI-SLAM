@@ -222,6 +222,14 @@ month={Oct},}
 
 # 2017
 
+## 2017-Fast Incremental Bundle Adjustment with Covariance Recovery
+
+- [Youtube-Demo](https://youtu.be/PG9X9k7KXRo)
+
+<iframe width="640 " height="480" src="https://www.youtube.com/embed/PG9X9k7KXRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 ## BundleFusion: Real-time Globally Consistent 3D Reconstruction using On the-fly Surface Reintegration
 
 - [Youtube-Demo](https://youtu.be/keIirXrRb1k)

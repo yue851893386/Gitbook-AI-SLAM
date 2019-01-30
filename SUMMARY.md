@@ -7,6 +7,7 @@
 
 ## Math Foundamentals
 * [Coordinate_System](Coordinate_System.md)
+* [Recursive Bayes Filter](Recursive_Bayes_Filter.md)
 
 ## AI SLAM
 
@@ -17,6 +18,10 @@
 * [Monocular Object and Plane SLAM in Structured Environments](Monocular-Object-and-Plane-SLAM-in-Structured-Environments.md)
 * [CubeSLAM](CubeSLAM.md)
 * [SSFM](SSFM.md)
+
+## Traditional SLAM
+* [ORB-SLAM](ORB-SLAM.md)
+
 
 ## lidar
 

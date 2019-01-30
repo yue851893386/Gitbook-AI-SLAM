@@ -16,7 +16,9 @@
 - [AlbertSlam/Lee-SLAM-source](https://github.com/AlbertSlam/Lee-SLAM-source) SLAM 开发学习资源与经验分享
 - [SLAMCN](http://www.slamcn.org/index.php/%E9%A6%96%E9%A1%B5)
 - [zhihu-学习SLAM需要哪些预备知识？](https://www.zhihu.com/question/35186064)
--
+- [marknabil/SFM-Visual-SLAM](https://github.com/marknabil/SFM-Visual-SLAM) source code list
+- [speed8928/3D-reconstruction](https://github.com/speed8928/3D-reconstruction) Awesome 3D reconstruction list
+- [jlblancoc/tutorial-se3-manifold](https://github.com/jlblancoc/tutorial-se3-manifold)
 
 ## Projects
 - [Parallel Tracking and Mapping for Small AR Workspaces - Source Cod](http://www.robots.ox.ac.uk/~gk/PTAM/)
