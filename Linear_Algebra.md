@@ -1,10 +1,13 @@
 
 # Subspace
 A Subspace subsject to:
+
 $$
+\begin{aligned}
 \vec 0 \in S \\
-\vec v_1, \vec v_2 \in S \rightarrow \vec v_1 + \vec v_2 \in S \\
-c \in R, \vec v \in S \rightarrow cv_1 \in S
+\vec v_1, \vec v_2 \in S &  \rightarrow \vec v_1 + \vec v_2 \in S \\
+c \in R, \vec v \in S &  \rightarrow cv_1 \in S
+\end{aligned}
 $$
 
 **Example**
@@ -81,8 +84,10 @@ A = U \Sigma V^T
 $$
 
 $$
-A^T A = ( U \Sigma V^T)^T ( U \Sigma V^T) = V (\Sigma^T \Sigma )V^T \\
-A A^T = ( U \Sigma V^T ) ( U \Sigma V^T)^T =  U (\Sigma \Sigma^T) U^T
+\begin{aligned}
+A^T A &= ( U \Sigma V^T)^T ( U \Sigma V^T) = V (\Sigma^T \Sigma )V^T \\
+A A^T &= ( U \Sigma V^T ) ( U \Sigma V^T)^T =  U (\Sigma \Sigma^T) U^T
+\end{aligned}
 $$
 
 **Conclusion:**
@@ -121,7 +126,7 @@ n阶复方阵U的n个列向量是U空间的一个标准正交基，则U是酉矩
 
 
 ## Application
-- PCA
+- PCA [StatQuest: Principal Component Analysis (PCA), Step-by-Step](https://www.youtube.com/watch?v=FgakZw6K1QQ)
 
 
 # References
