@@ -8,6 +8,7 @@
 ## Math Foundamentals
 * [Coordinate_System](Coordinate_System.md)
 * [Recursive Bayes Filter](Recursive_Bayes_Filter.md)
+* [Linear Algebra](Linear_Algebra.md)
 
 ## AI SLAM
 

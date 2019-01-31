@@ -34,6 +34,7 @@
 ## BOOKS
 - [Multiple View Geometry in Computer Vision](Multiple View Geometry in Computer Vision)
     - [Youtube-Multiple View Geometry - Lecture ](https://www.youtube.com/watch?v=RDkwklFGMfo&list=PLTBdjV_4f-EJn6udZ34tht9EVIW7lbeo4)
+    - [maolingao/mvg_slides](https://github.com/maolingao/mvg_slides) slides
 - [Probabilistic Robotics](http://www.probabilistic-robotics.org/)
 -
 
