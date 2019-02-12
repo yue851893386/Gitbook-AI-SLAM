@@ -120,8 +120,10 @@ I just want to estimate the current pose of the robot and the map build up to th
 
 - Online SLAM means marginalizing out the previous poses
 $$
+\begin{aligned}
 p(x_{t}, m | z_{1:t}, u_{1:t}) = \\
 \int_{x_0} ... \int_{x_{t-1}} p(x_{0:t}, m|z_{1:t}, u_{1:t})dx_{t-1}... dx_0
+\end{aligned}
 $$
 
 P of A is the integral over all B's of P of A and B db, and what is remains if I integrate about all possible outcomes that B can take and end up having the probability distribution body.
@@ -138,8 +140,10 @@ $$
 ![Graphical Model of Online SLAM](assets/markdown-img-paste-20190128100304730.png){#fig:}
 
 $$
+\begin{aligned}
 p(x_{t+1}, m | z_{1:t+1}, u_{1:t+1}) = \\
-\int_{x_0} ... \int_{x_{t}} p(x_{0:t+1}, m|z_{1:t+1}, u_{1:t+1})dx_{t}... dx_0
+\int_{x_0} ... \int_{x_{t}} p(x_{0:t+1}, m|z_{1:t+1},  u_{1:t+1})dx_{t}... dx_0
+\end{aligned}
 $$
 
 ## Why is SLAM a Hard Problem?
@@ -192,9 +196,11 @@ The motion model describes the relative motion of the robot
 - Odometry information $u=(\delta_{rot1}, \delta_{trans}, \delta_{rot2})$
 
 $$
+\begin{aligned}
 \delta_{trans} = \sqrt{ (\bar x'-\bar x)^2 + (\bar y' - \bar y)^2 }\\
 \delta_{rot1} = atan2(\bar y'-\bar y, \bar x' - \bar x) - \bar \theta  \\
 \delta_{rot2} = \bar \theta' - \bar \theta - \delta_{rot1}
+\end{aligned}
 $$
 
 ## Observation Model

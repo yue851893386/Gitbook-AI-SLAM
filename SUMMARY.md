@@ -9,6 +9,8 @@
 * [Coordinate_System](Coordinate_System.md)
 * [Recursive Bayes Filter](Recursive_Bayes_Filter.md)
 * [Linear Algebra](Linear_Algebra.md)
+* [quaternion](quaternion.md)
+* [Kalman Filter](KalmanFilter.md)
 
 ## AI SLAM
 
@@ -20,8 +22,10 @@
 * [CubeSLAM](CubeSLAM.md)
 * [SSFM](SSFM.md)
 
-## Traditional SLAM
+## Visual SLAM
+
 * [ORB-SLAM](ORB-SLAM.md)
+* [PTAM](PTAM.md)
 
 
 ## lidar
